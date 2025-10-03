@@ -5,6 +5,8 @@ using UnityEngine;
 public class SpearsMoveController : MonoBehaviour
 {
     [SerializeField] private float MoveSpeed=2;
+
+    private float DeadZone = -4;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,5 +17,10 @@ public class SpearsMoveController : MonoBehaviour
     void Update()
     {
         transform.position = transform.position + Vector3.left * MoveSpeed * Time.deltaTime;
+
+        if (transform.position.x < DeadZone)
+        {
+            Destroy(gameObject);
+        }
     }
 }
