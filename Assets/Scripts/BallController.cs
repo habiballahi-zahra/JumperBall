@@ -6,7 +6,7 @@ using UnityEngine;
 public class BallController : MonoBehaviour
 {
     public LogicController Logic;
-    [SerializeField] private Rigidbody2D rigidbody;
+    [SerializeField] private Rigidbody2D myRigidbody;
 
     [SerializeField] private float JumpSpeed;
 
@@ -33,7 +33,7 @@ public class BallController : MonoBehaviour
 
     void Jumping()
     {
-        rigidbody.velocity = Vector2.up * JumpSpeed;
+        myRigidbody.velocity = Vector2.up * JumpSpeed;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
