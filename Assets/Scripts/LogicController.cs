@@ -34,6 +34,14 @@ public class LogicController : MonoBehaviour
         GameOverScreen.SetActive(true);
         ballController.ActiveBall = false;
     }
+     public void StartGame()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
 
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 
 }

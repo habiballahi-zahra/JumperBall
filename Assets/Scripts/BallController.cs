@@ -33,7 +33,7 @@ public class BallController : MonoBehaviour
 
     void Jumping()
     {
-        myRigidbody.velocity = Vector2.up * JumpSpeed;
+        myRigidbody.linearVelocity = Vector2.up * JumpSpeed;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
