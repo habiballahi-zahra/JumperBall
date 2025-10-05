@@ -7,6 +7,11 @@ using UnityEngine.UI;
 
 public class LogicController : MonoBehaviour
 {
+
+    [SerializeField] private AudioSource MusicSource;
+   
+    [SerializeField] private  AudioClip hitSound;
+
     [SerializeField] private GameObject GameOverScreen;
     [SerializeField] public int PlayerScore;
     [SerializeField] public TextMeshProUGUI ScoreText;
@@ -31,6 +36,8 @@ public class LogicController : MonoBehaviour
 
     public void GameOver()
     {
+        MusicSource.PlayOneShot(hitSound);
+       
         GameOverScreen.SetActive(true);
         ballController.ActiveBall = false;
     }

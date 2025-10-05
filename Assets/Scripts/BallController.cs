@@ -8,8 +8,6 @@ public class BallController : MonoBehaviour
     public LogicController Logic;
     [SerializeField] private Rigidbody2D myRigidbody;
 
-    [SerializeField] private AudioSource MusicSource;
-    [SerializeField] private  AudioClip hitSound;
     [SerializeField] private float JumpSpeed;
 
      public bool ActiveBall=true; 
@@ -27,7 +25,7 @@ public class BallController : MonoBehaviour
             Jumping();
         }
 
-        if (transform.position.y > 2 || transform.position.y < -2)
+        if ((transform.position.y > 2 || transform.position.y < -2) && ActiveBall == true)
         { 
              Logic.GameOver();
         }
@@ -40,8 +38,11 @@ public class BallController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Logic.GameOver();
-        MusicSource.PlayOneShot(hitSound);
+        if (ActiveBall)
+        {
+            Logic.GameOver();
+        }
+        
        
     }
 }

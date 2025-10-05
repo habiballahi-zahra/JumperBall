@@ -504,6 +504,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 228b64289001e974bb2037297e0823df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MusicSource: {fileID: 1163689854}
+  hitSound: {fileID: 8300000, guid: 35d13f5b7c4d5e5c881fe5bb36615eb7, type: 3}
   GameOverScreen: {fileID: 223447441}
   PlayerScore: 0
   ScoreText: {fileID: 2012738478}
@@ -1110,8 +1112,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Logic: {fileID: 1147786553}
   myRigidbody: {fileID: 1737184900}
-  MusicSource: {fileID: 1163689854}
-  hitSound: {fileID: 8300000, guid: 35d13f5b7c4d5e5c881fe5bb36615eb7, type: 3}
   JumpSpeed: 3
   ActiveBall: 1
 --- !u!1 &1881829431
